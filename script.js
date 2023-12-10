@@ -13,20 +13,19 @@ async function displayBooks() {
         console.log('Fetched books:', books);
 
         const table = document.getElementById('booksTable');
-        // Clear existing rows
+        
         table.innerHTML = '<tr><th>Title</th><th>Author</th><th>Action</th></tr>';
 
-        // Populate the table with book data
-        // Populate the table with book data
+        
 books.forEach(book => {
     console.log('Book:', book);
 
     const row = table.insertRow();
 
-    // Log the entire book object
+    
     console.log('Book Object:', book);
 
-    // Extract title and author with fallback to 'N/A'
+
     const title = book.title || book.name || book.someOtherProperty || 'N/A';
     const author = book.author || book.creator || book.someAuthorProperty || 'N/A';
 
@@ -44,7 +43,7 @@ books.forEach(book => {
     }
 }
 
-// Rest of your code remains unchanged
+
 
 
 async function addBook() {
@@ -115,7 +114,7 @@ function editBook(id, title, author) {
     const titleInput = document.getElementById('title');
     const authorInput = document.getElementById('author');
 
-    // Set input values directly
+    
     titleInput.value = title || '';
     authorInput.value = author || '';
 
@@ -151,6 +150,6 @@ function editBook(id, title, author) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Initial display of books
+   
     displayBooks();
 });
